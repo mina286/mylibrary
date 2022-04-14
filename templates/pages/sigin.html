@@ -1,0 +1,21 @@
+{%extends 'base.html'%}
+{%load static%}
+{%block content%}
+{% include 'partials/_alert.html'%}
+
+<form method="POST">
+    {%csrf_token%}
+    <div class="form-group " style='margin-right: 260px;'>
+        <label>username</label>
+        <input type="text" name="user_name">
+    </div>
+
+    <div class="form-group" style='margin-right: 260px;'>
+        <label>password</label>
+        <input type="password" name="password">
+        <button class="btn btn-primary" name="btnlogin" type="submit">login</button> 
+    </div>
+
+ 
+</form>
+{%endblock %}
